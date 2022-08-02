@@ -6,7 +6,6 @@ module.exports = {
     connection: {
       filename: path.resolve(__dirname, "src", "database", "database.db"),
     },
-
     pool: {
       afterCreate: (conn, cb) => conn.run("PRAGMA foreign_keys = ON", cb),
     },
@@ -20,7 +19,6 @@ module.exports = {
         "migrations"
       ),
     },
-
     useNullAsDefault: true,
   },
 };
